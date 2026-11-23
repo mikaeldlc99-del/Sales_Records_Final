@@ -1,0 +1,60 @@
+**clonar repositorio desde github
+
+Opción 1: Directo desde la interfaz visual de VS Code (Más fácil)
+
+1. Abre Visual Studio Code (en una ventana nueva o cierra la carpeta del proyecto anterior con Ctrl + K seguido de F).
+2. Presiona Ctrl + Shift + P para abrir la paleta de comandos arriba.
+3. Escribe Git: Clone y presiona Enter.
+4. Haz clic en Clone from GitHub (o pega la URL completa de tu repositorio: https://github.com).
+5. Selecciona la carpeta en tu computadora donde guardas tus proyectos (por ejemplo, Documentos o Desktop) y haz clic en Select as Repository Destination.
+6. Cuando termine (tarda 2 segundos), haz clic en el botón azul Open que aparece abajo a la derecha.
+
+
+Opción 2: Por terminal en VS Code
+
+1. Abre una terminal en VS Code (Ctrl + ñ) ubicada en la carpeta donde guardas tus proyectos (fuera de tu proyecto anterior).
+
+git clone https://github.com
+
+1.Crear Backend:
+
+mkdir Backend
+cd Backend
+npm init -y
+npm install express mysql2 cors dotenv
+
+Luego, abre Backend/package.json y asegúrate de agregar "start": "node server.js" dentro de "scripts" (para que luego Render sepa cómo encenderlo):
+json
+
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+1.1.Crear .env, db.js y server.js dentro de Backend
+PORT=3000
+DB_HOST=://tidbcloud.com
+DB_PORT=4000
+DB_USER=ztzK9jLrEQgX8X5.root
+DB_PASSWORD=tu_contraseña_actual_de_tidb
+DB_NAME=ventas_final_db
+
+Para crear la BD en tidbcloud
+
+CREATE DATABASE IF NOT EXISTS ventas_final_db;
+USE ventas_final_db;
+CREATE TABLE IF NOT EXISTS registros (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    documento VARCHAR(20) NOT NULL,
+    fecha VARCHAR(20) NOT NULL,
+    hora VARCHAR(20) NOT NULL,
+    estado VARCHAR(30) NOT NULL,
+    observaciones TEXT
+) AUTO_ID_CACHE = 1;
+
+
+2.Crear Frontend-React
+cd ..
+npm create vite@latest Frontend-React -- --template react
+
+
