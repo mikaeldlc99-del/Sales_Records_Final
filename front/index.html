@@ -1,37 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css
+" />
+    <link rel="stylesheet" href="styles.css" />
     <title>Gym</title>
 </head>
+
 <body>
-    <div class="general-container">
-        <h1>Mickey's Gym</h1>
-        <header class="header">
-            <nav class="navbar">
-                <ul class="nav-links">
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                    <li><a href=""></a></li>
-                </ul>
+    <header class="header-nav">
+        <!--Left header-->
+        <a href="#" class="logo-name">
+                <i class="fa-solid fa-dumbbell"></i>
+                <h2>Mickey's Gym</h2>
+        </a>
 
+        <!--Middle header-->
+        <nav class="navbar1">
+            <ul class="nav-links">
+                <li><a href="#">Mienbros</a></li>
+                <li>
+                    <select class="info"
+                        onchange="if (this.value) { window.open(this.value, '_blank'); this.selectedIndex = 0; }">
+                        <option value="" disabled selected hidden>Why MG?</option>
+                        <option value="MG.html">Why Mickey's Gym?</option>
+                        <option value="about.html">About Mickey's Gym</option>
+                        <option value="purpose.html">MG Purpose</option>
+                        <option value="perks.html">Member Perks</option>
+                    </select>
+                </li>
+                <li><a href="#">Trabaja con nosotros</a></li>
+                <li><a href="#">MG Store</a></li>
+            </ul>
+        </nav>
 
-            </nav>
+        <!--Right header-->
+        <div class="navbar2">
+            <div class="sub-navbar2">
+                <select name="" id="" class="languages"
+                    onchange="if (this.value) { window.open(this.value); this.selectedIndex = 0; }">
+                    <option value="" disabled selected hidden>English</option>
+                    <option value="">Spanish</option>
+                    <option value="">French</option>
+                    <option value="">Chinesse</option>
+                    <option value="">Portuguese</option>
+                </select>
 
+                <a href="#" class="logo-acc">
+                    <i class="fa-regular fa-circle-user"></i>
+                    <h2>Mi Cuenta</h2>
+                </a>
+                
+            </div>
 
-
-
-        </header>
-
-
-
-
-
-
-    </div>
+            <div class="login">
+                <a href=""> Ingresa Ahora </a>
+            </div>
+        </div>
+    </header>
 </body>
+
 </html>

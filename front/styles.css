@@ -1,11 +1,74 @@
 body {
-    font-family: sans-serif,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.header-nav {
+    background-color: rgba(0, 102, 255, 0.932);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 30px;
+}
+
+.logo-name,
+.logo-acc,
+.navbar1,
+.navbar2,
+.sub-navbar2 {
+    display: flex;
+    align-items: center;
+}
+
+.logo-name {
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.general-container h1 {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav-links li a,
+select {
+    font-family: sans-serif;
+    font-size: 15px;
+    font-weight: bold;
+    color: white;
+}
+
+.nav-links li a {
+    padding: 0 10px;
+    transition: background-color 0.2s ease;
+}
+
+.navbar2 {
+    gap: 20px;
+}
+
+.sub-navbar2 {
+    gap: 15px;
+}
+
+.logo-acc {
+    gap: 8px;
+}
+
+select {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+select option {
+    color: black;
 }
